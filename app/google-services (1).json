@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "488174350775",
+    "project_id": "gestion-farmacia-7ed47",
+    "storage_bucket": "gestion-farmacia-7ed47.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:488174350775:android:e2f63c6c0b152da6f8b832",
+        "android_client_info": {
+          "package_name": "com.example.gestion_farmacia"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAOFYXKQMnXi7qDJna5fm53u9FICb9VCNA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
