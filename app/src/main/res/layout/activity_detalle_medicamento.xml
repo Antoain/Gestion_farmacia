@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F0F4F8">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1A73E8"
+        android:padding="20dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="✏️ Detalle / Editar"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nombre del medicamento"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_marginBottom="16dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etNombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Categoría"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_marginBottom="16dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etCategoria"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Precio ($)"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_marginBottom="16dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPrecio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Stock"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_marginBottom="16dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etStock"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Descripción"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_marginBottom="24dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etDescripcion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minLines="3"
+                    android:gravity="top"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btnActualizar"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="Actualizar Medicamento"
+                android:backgroundTint="#1A73E8"
+                android:textSize="16sp"
+                android:layout_marginBottom="12dp"/>
+
+            <Button
+                android:id="@+id/btnEliminar"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="Eliminar Medicamento"
+                android:backgroundTint="#E53935"
+                android:textSize="16sp"/>
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:layout_marginTop="16dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
