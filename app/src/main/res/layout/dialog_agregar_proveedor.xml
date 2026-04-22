@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre del proveedor"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_marginBottom="12dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etNombreDialog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Teléfono"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_marginBottom="16dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etTelefonoDialog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Productos que suministra:"
+            android:textStyle="bold"
+            android:textColor="#1A1A1A"
+            android:textSize="14sp"
+            android:layout_marginBottom="8dp"/>
+
+        <CheckBox android:id="@+id/cbAntibioticos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="💊 Antibióticos"/>
+        <CheckBox android:id="@+id/cbAnalgesicos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="💊 Analgésicos"/>
+        <CheckBox android:id="@+id/cbAntihistaminicos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="💊 Antihistamínicos"/>
+        <CheckBox android:id="@+id/cbGastrointestinales"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="💊 Gastrointestinales"/>
+        <CheckBox android:id="@+id/cbAntidiabeticos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="💊 Antidiabéticos"/>
+        <CheckBox android:id="@+id/cbCardiovasculares"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="💊 Cardiovasculares"/>
+        <CheckBox android:id="@+id/cbRespiratorios"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="💊 Respiratorios"/>
+        <CheckBox android:id="@+id/cbSuplementos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="💊 Suplementos y Vitaminas"/>
+        <CheckBox android:id="@+id/cbDermatologicos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="💊 Dermatológicos"/>
+        <CheckBox android:id="@+id/cbNeurologicos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="💊 Neurológicos"/>
+
+    </LinearLayout>
+</ScrollView>
