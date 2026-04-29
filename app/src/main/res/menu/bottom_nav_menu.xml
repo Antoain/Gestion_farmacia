@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@android:drawable/ic_menu_more"
+        android:title="Inicio" />
+
+    <item
+        android:id="@+id/medicamentosFragment"
+        android:icon="@android:drawable/ic_menu_add"
+        android:title="Medicamentos" />
+
+    <item
+        android:id="@+id/proveedoresFragment"
+        android:icon="@android:drawable/ic_menu_myplaces"
+        android:title="Proveedores" />
+
+    <item
+        android:id="@+id/nav_cerrar_sesion"
+        android:icon="@android:drawable/ic_menu_close_clear_cancel"
+        android:title="Salir" />
+
+</menu>

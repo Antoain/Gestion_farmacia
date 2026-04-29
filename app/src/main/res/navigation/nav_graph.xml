@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.gestion_farmacia.HomeFragment"
+        android:label="Inicio" />
+
+    <fragment
+        android:id="@+id/medicamentosFragment"
+        android:name="com.example.gestion_farmacia.MedicamentosFragment"
+        android:label="Medicamentos" />
+
+    <fragment
+        android:id="@+id/proveedoresFragment"
+        android:name="com.example.gestion_farmacia.ProveedoresFragment"
+        android:label="Proveedores" />
+
+</navigation>

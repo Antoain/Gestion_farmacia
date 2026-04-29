@@ -2,14 +2,18 @@ package com.example.gestion_farmacia
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import androidx.cardview.widget.CardView
+import androidx.navigation.NavController
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var auth: FirebaseAuth
+    private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,25 +21,46 @@ class MainActivity : AppCompatActivity() {
 
         auth = FirebaseAuth.getInstance()
 
-        // Mostrar email del usuario
-        val tvBienvenida = findViewById<TextView>(R.id.tvBienvenida)
-        tvBienvenida.text = "Bienvenido, ${auth.currentUser?.email}"
-
-        // Navegar a Medicamentos
-        findViewById<CardView>(R.id.cardMedicamentos).setOnClickListener {
-            startActivity(Intent(this, MedicamentosActivity::class.java))
-        }
-
-        // Navegar a Proveedores
-        findViewById<CardView>(R.id.cardProveedores).setOnClickListener {
-            startActivity(Intent(this, ProveedoresActivity::class.java))
-        }
-
-        // Cerrar sesión
-        findViewById<CardView>(R.id.cardCerrarSesion).setOnClickListener {
-            auth.signOut()
+        if (auth.currentUser == null) {
             startActivity(Intent(this, LoginActivity::class.java))
             finish()
+            return
         }
+
+        val navHostFragment = supportFragmentManager
+            .findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+        navController = navHostFragment.navController
+
+        val bottomNav = findViewById<BottomNavigationView>(R.id.bottom_nav)
+        bottomNav.setupWithNavController(navController)
+
+        // Interceptar el botón Salir antes de que NavController lo maneje
+        bottomNav.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.nav_cerrar_sesion -> {
+                    AlertDialog.Builder(this)
+                        .setTitle("Cerrar sesión")
+                        .setMessage("¿Estás seguro que deseas salir?")
+                        .setPositiveButton("Salir") { _, _ ->
+                            auth.signOut()
+                            startActivity(Intent(this, LoginActivity::class.java))
+                            finish()
+                        }
+                        .setNegativeButton("Cancelar", null)
+                        .show()
+                    true
+                }
+                else -> {
+                    navController.navigate(item.itemId)
+                    true
+                }
+            }
+        }
+    }
+
+    fun cerrarSesion() {
+        auth.signOut()
+        startActivity(Intent(this, LoginActivity::class.java))
+        finish()
     }
 }

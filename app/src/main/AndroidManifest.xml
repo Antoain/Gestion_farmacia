@@ -20,11 +20,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".RegisterActivity" android:exported="false"/>
         <activity android:name=".MainActivity" android:exported="false"/>
-        <activity android:name=".MedicamentosActivity" android:exported="false"/>
         <activity android:name=".AgregarMedicamentoActivity" android:exported="false"/>
         <activity android:name=".DetalleMedicamentoActivity" android:exported="false"/>
-        <activity android:name=".ProveedoresActivity" android:exported="false"/>
 
     </application>
 

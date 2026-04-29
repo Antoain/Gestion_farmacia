@@ -1,8 +1,13 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
     <style name="Base.Theme.Gestion_farmacia" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/verde_primario</item>
+        <item name="colorPrimaryVariant">@color/verde_oscuro</item>
+        <item name="colorSecondary">@color/verde_secundario</item>
+        <item name="colorSurface">@color/blanco</item>
+        <item name="android:colorBackground">@color/verde_suave</item>
+        <item name="colorOnPrimary">@color/blanco</item>
+        <item name="android:statusBarColor">@color/verde_oscuro</item>
     </style>
 
     <style name="Theme.Gestion_farmacia" parent="Base.Theme.Gestion_farmacia" />

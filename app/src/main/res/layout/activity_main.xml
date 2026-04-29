@@ -1,177 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="#F0F4F8">
+    android:background="@color/verde_suave">
 
-    <!-- Header -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#1A73E8"
-        android:padding="24dp"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="FarmaGest"
-            android:textColor="#FFFFFF"
-            android:textSize="22sp"
-            android:textStyle="bold"/>
-
-        <TextView
-            android:id="@+id/tvBienvenida"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Bienvenido"
-            android:textColor="#BBDEFB"
-            android:textSize="14sp"/>
-    </LinearLayout>
-
-    <!-- Cards -->
-    <ScrollView
-        android:layout_width="match_parent"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:padding="16dp">
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/nav_graph"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottom_nav"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/blanco"
+        app:menu="@menu/bottom_nav_menu"
+        app:itemIconTint="@color/verde_primario"
+        app:itemTextColor="@color/verde_oscuro"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
-            <!-- Card Medicamentos -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardMedicamentos"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="4dp"
-                xmlns:app="http://schemas.android.com/apk/res-auto">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:padding="20dp"
-                    android:gravity="center_vertical">
-                    <TextView
-                        android:layout_width="56dp"
-                        android:layout_height="56dp"
-                        android:text="💊"
-                        android:textSize="28sp"
-                        android:gravity="center"/>
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_marginStart="16dp">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Medicamentos"
-                            android:textSize="18sp"
-                            android:textStyle="bold"
-                            android:textColor="#1A1A1A"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Gestionar inventario"
-                            android:textSize="13sp"
-                            android:textColor="#666666"/>
-                    </LinearLayout>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <!-- Card Proveedores -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardProveedores"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="4dp"
-                xmlns:app="http://schemas.android.com/apk/res-auto">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:padding="20dp"
-                    android:gravity="center_vertical">
-                    <TextView
-                        android:layout_width="56dp"
-                        android:layout_height="56dp"
-                        android:text="🏭"
-                        android:textSize="28sp"
-                        android:gravity="center"/>
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_marginStart="16dp">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Proveedores"
-                            android:textSize="18sp"
-                            android:textStyle="bold"
-                            android:textColor="#1A1A1A"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Gestionar proveedores"
-                            android:textSize="13sp"
-                            android:textColor="#666666"/>
-                    </LinearLayout>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <!-- Card Cerrar Sesión -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardCerrarSesion"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="4dp"
-                xmlns:app="http://schemas.android.com/apk/res-auto">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:padding="20dp"
-                    android:gravity="center_vertical">
-                    <TextView
-                        android:layout_width="56dp"
-                        android:layout_height="56dp"
-                        android:text="🚪"
-                        android:textSize="28sp"
-                        android:gravity="center"/>
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_marginStart="16dp">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Cerrar Sesión"
-                            android:textSize="18sp"
-                            android:textStyle="bold"
-                            android:textColor="#E53935"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Salir de la aplicación"
-                            android:textSize="13sp"
-                            android:textColor="#666666"/>
-                    </LinearLayout>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-        </LinearLayout>
-    </ScrollView>
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
