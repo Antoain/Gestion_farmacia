@@ -1,5 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Paleta principal -->
+    <color name="verde_primario">#2FAF7A</color>
+    <color name="verde_secundario">#4CAF8E</color>
+    <color name="verde_oscuro">#1F7A5C</color>
+
+    <!-- Paleta soporte -->
+    <color name="verde_claro">#A8DCCB</color>
+    <color name="verde_pastel">#DFF3EC</color>
+    <color name="verde_suave">#F2FBF8</color>
+
+    <!-- Neutrales -->
+    <color name="blanco">#FFFFFF</color>
+    <color name="gris_claro">#F5F5F5</color>
+    <color name="gris_medio">#9E9E9E</color>
+    <color name="gris_oscuro">#333333</color>
+
+    <!-- Funcionales -->
+    <color name="color_exito">#28C76F</color>
+    <color name="color_error">#EA5455</color>
+    <color name="color_advertencia">#FF9F43</color>
+    <color name="color_info">#00CFE8</color>
+
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 </resources>
