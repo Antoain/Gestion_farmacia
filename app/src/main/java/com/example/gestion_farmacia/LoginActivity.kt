@@ -31,13 +31,7 @@ class LoginActivity : AppCompatActivity() {
         val etEmail = findViewById<TextInputEditText>(R.id.etEmail)
         val etPassword = findViewById<TextInputEditText>(R.id.etPassword)
         val btnLogin = findViewById<Button>(R.id.btnLogin)
-        val tvIrRegistro = findViewById<TextView>(R.id.tvIrRegistro)
         val progressBar = findViewById<ProgressBar>(R.id.progressBar)
-
-        // Ir a pantalla de registro
-        tvIrRegistro.setOnClickListener {
-            startActivity(Intent(this, RegisterActivity::class.java))
-        }
 
         btnLogin.setOnClickListener {
 

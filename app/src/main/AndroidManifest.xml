@@ -21,10 +21,12 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".RegisterActivity" android:exported="false"/>
+
         <activity android:name=".MainActivity" android:exported="false"/>
         <activity android:name=".AgregarMedicamentoActivity" android:exported="false"/>
         <activity android:name=".DetalleMedicamentoActivity" android:exported="false"/>
+        <activity android:name=".AgregarProveedorActivity" android:exported="false"/>
+        <activity android:name=".DetalleProveedorActivity" android:exported="false"/>
 
     </application>
 
