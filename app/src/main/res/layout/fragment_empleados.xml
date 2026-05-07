@@ -21,13 +21,13 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="💊 Medicamentos"
+            android:text="👥 Empleados"
             android:textColor="@color/blanco"
             android:textSize="20sp"
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/btnAgregar"
+            android:id="@+id/btnAgregarEmpleado"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:text="+ Agregar"
@@ -37,26 +37,6 @@
 
     </LinearLayout>
 
-    <!-- Barra de búsqueda -->
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="🔍 Buscar por nombre o categoría..."
-        android:layout_marginStart="12dp"
-        android:layout_marginEnd="12dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginBottom="4dp"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etBuscar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="text"
-            android:imeOptions="actionSearch" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
     <ProgressBar
         android:id="@+id/progressBar"
         android:layout_width="wrap_content"
@@ -65,7 +45,7 @@
         android:visibility="gone" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerMedicamentos"
+        android:id="@+id/recyclerEmpleados"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"

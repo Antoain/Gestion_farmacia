@@ -6,7 +6,7 @@
     android:background="#DFF3EC"
     android:orientation="vertical">
 
-    <!-- HEADER PLANO: logo izq + nombre/correo derecha -->
+    <!-- HEADER -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -23,7 +23,7 @@
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:layout_marginEnd="14dp"
-            android:contentDescription="Logo Simsimi"
+            android:contentDescription="Logo"
             android:src="@drawable/logo_simsimi" />
 
         <LinearLayout
@@ -46,7 +46,7 @@
                 android:layout_marginTop="2dp"
                 android:text="Bienvenido a Farmacias Simsimi"
                 android:textColor="#fff"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/tvUsuario"
@@ -57,8 +57,22 @@
                 android:textColor="#fff"
                 android:textSize="12sp" />
 
-        </LinearLayout>
+            <!-- Badge de rol -->
+            <TextView
+                android:id="@+id/tvRol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:background="#33FFFFFF"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:text="👑 Administrador"
+                android:textColor="#FFFFFF"
+                android:textSize="11sp" />
 
+        </LinearLayout>
     </LinearLayout>
 
     <!-- CONTENIDO -->
@@ -83,7 +97,6 @@
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
-            <!-- CARDS con altura fija: las 3 quedan iguales, sin deformacion -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
@@ -98,20 +111,17 @@
                     android:layout_weight="1"
                     app:cardCornerRadius="12dp"
                     app:cardElevation="3dp">
-
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:orientation="vertical"
                         android:padding="8dp">
-
                         <ImageView
                             android:layout_width="32dp"
                             android:layout_height="32dp"
                             android:src="@drawable/pill2"
                             android:contentDescription="Medicamentos" />
-
                         <TextView
                             android:id="@+id/tvTotalMedicamentos"
                             android:layout_width="wrap_content"
@@ -120,13 +130,10 @@
                             android:textColor="#1A73E8"
                             android:textSize="24sp"
                             android:textStyle="bold" />
-
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:ellipsize="none"
                             android:gravity="center"
-                            android:maxLines="1"
                             android:text="Medicamentos"
                             android:textColor="#1F7A5C"
                             android:textSize="10sp" />
@@ -142,20 +149,17 @@
                     android:layout_weight="1"
                     app:cardCornerRadius="12dp"
                     app:cardElevation="3dp">
-
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:orientation="vertical"
                         android:padding="8dp">
-
                         <ImageView
                             android:layout_width="32dp"
                             android:layout_height="32dp"
                             android:src="@drawable/proveedores"
                             android:contentDescription="Proveedores" />
-
                         <TextView
                             android:id="@+id/tvTotalProveedores"
                             android:layout_width="wrap_content"
@@ -164,13 +168,10 @@
                             android:textColor="#1A73E8"
                             android:textSize="24sp"
                             android:textStyle="bold" />
-
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:ellipsize="none"
                             android:gravity="center"
-                            android:maxLines="1"
                             android:text="Proveedores"
                             android:textColor="#1F7A5C"
                             android:textSize="10sp" />
@@ -189,21 +190,17 @@
                     android:foreground="?attr/selectableItemBackground"
                     app:cardCornerRadius="12dp"
                     app:cardElevation="3dp">
-
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:orientation="vertical"
                         android:padding="8dp">
-
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="⚠️"
-                            android:textAlignment="center"
                             android:textSize="24sp" />
-
                         <TextView
                             android:id="@+id/tvStockBajo"
                             android:layout_width="wrap_content"
@@ -212,13 +209,10 @@
                             android:textColor="#E53935"
                             android:textSize="24sp"
                             android:textStyle="bold" />
-
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:ellipsize="none"
                             android:gravity="center"
-                            android:maxLines="1"
                             android:text="Stock bajo"
                             android:textColor="#1F7A5C"
                             android:textSize="10sp" />
@@ -235,25 +229,22 @@
                 app:cardBackgroundColor="#FFF3E0"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="2dp">
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
                     android:padding="16dp">
-
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="12dp"
                         android:text="ℹ️"
                         android:textSize="20sp" />
-
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Toca Stock bajo para ver los medicamentos que tienen menos de 10 unidades en stock."
+                        android:text="Toca Stock bajo para ver los medicamentos con menos de 10 unidades."
                         android:textColor="#E65100"
                         android:textSize="13sp" />
                 </LinearLayout>

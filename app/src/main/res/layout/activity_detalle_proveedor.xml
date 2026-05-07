@@ -4,26 +4,35 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/verde_suave">
+    android:background="@color/verde_pastel">
 
+    <!-- Header consistente con el resto de la app -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/verde_oscuro"
-        android:padding="20dp">
+        android:background="@color/verde_secundario"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="40dp"
+        android:paddingBottom="16dp">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="🏭 Detalle / Editar Proveedor"
             android:textColor="@color/blanco"
             android:textSize="20sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
+
     </LinearLayout>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="16dp">
+        android:padding="16dp"
+        android:clipToPadding="false">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -51,7 +60,7 @@
                         android:textSize="15sp"
                         android:textStyle="bold"
                         android:textColor="@color/verde_oscuro"
-                        android:layout_marginBottom="16dp"/>
+                        android:layout_marginBottom="16dp" />
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
@@ -63,7 +72,7 @@
                             android:id="@+id/etNombre"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:inputType="textPersonName"/>
+                            android:inputType="textPersonName" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
@@ -75,13 +84,13 @@
                             android:id="@+id/etTelefono"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:inputType="phone"/>
+                            android:inputType="phone" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- Productos que suministra (escondible, abierto por defecto en edición) -->
+            <!-- Productos que suministra (abierto por defecto en edición) -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -110,7 +119,7 @@
                             android:text="Productos que suministra"
                             android:textSize="15sp"
                             android:textStyle="bold"
-                            android:textColor="@color/verde_oscuro"/>
+                            android:textColor="@color/verde_oscuro" />
 
                         <TextView
                             android:id="@+id/tvToggle"
@@ -119,10 +128,9 @@
                             android:text="▲ Ocultar"
                             android:textColor="@color/verde_primario"
                             android:textSize="13sp"
-                            android:textStyle="bold"/>
+                            android:textStyle="bold" />
                     </LinearLayout>
 
-                    <!-- Checkboxes (visibles por defecto en edición) -->
                     <LinearLayout
                         android:id="@+id/contenedorCheckboxes"
                         android:layout_width="match_parent"
@@ -133,66 +141,17 @@
                         android:paddingBottom="16dp"
                         android:visibility="visible">
 
-                        <CheckBox android:id="@+id/cbAntibioticos"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Antibióticos"
-                            android:textColor="@color/gris_oscuro"
-                            android:buttonTint="@color/verde_primario"/>
-                        <CheckBox android:id="@+id/cbAnalgesicos"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Analgésicos"
-                            android:textColor="@color/gris_oscuro"
-                            android:buttonTint="@color/verde_primario"/>
-                        <CheckBox android:id="@+id/cbAntihistaminicos"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Antihistamínicos"
-                            android:textColor="@color/gris_oscuro"
-                            android:buttonTint="@color/verde_primario"/>
-                        <CheckBox android:id="@+id/cbGastrointestinales"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Gastrointestinales"
-                            android:textColor="@color/gris_oscuro"
-                            android:buttonTint="@color/verde_primario"/>
-                        <CheckBox android:id="@+id/cbAntidiabeticos"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Antidiabéticos"
-                            android:textColor="@color/gris_oscuro"
-                            android:buttonTint="@color/verde_primario"/>
-                        <CheckBox android:id="@+id/cbCardiovasculares"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Cardiovasculares"
-                            android:textColor="@color/gris_oscuro"
-                            android:buttonTint="@color/verde_primario"/>
-                        <CheckBox android:id="@+id/cbRespiratorios"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Respiratorios"
-                            android:textColor="@color/gris_oscuro"
-                            android:buttonTint="@color/verde_primario"/>
-                        <CheckBox android:id="@+id/cbSuplementos"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Suplementos y Vitaminas"
-                            android:textColor="@color/gris_oscuro"
-                            android:buttonTint="@color/verde_primario"/>
-                        <CheckBox android:id="@+id/cbDermatologicos"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Dermatológicos"
-                            android:textColor="@color/gris_oscuro"
-                            android:buttonTint="@color/verde_primario"/>
-                        <CheckBox android:id="@+id/cbNeurologicos"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Neurológicos"
-                            android:textColor="@color/gris_oscuro"
-                            android:buttonTint="@color/verde_primario"/>
+                        <CheckBox android:id="@+id/cbAntibioticos" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Antibióticos" android:textColor="@color/gris_oscuro" android:buttonTint="@color/verde_primario"/>
+                        <CheckBox android:id="@+id/cbAnalgesicos" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Analgésicos" android:textColor="@color/gris_oscuro" android:buttonTint="@color/verde_primario"/>
+                        <CheckBox android:id="@+id/cbAntihistaminicos" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Antihistamínicos" android:textColor="@color/gris_oscuro" android:buttonTint="@color/verde_primario"/>
+                        <CheckBox android:id="@+id/cbGastrointestinales" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Gastrointestinales" android:textColor="@color/gris_oscuro" android:buttonTint="@color/verde_primario"/>
+                        <CheckBox android:id="@+id/cbAntidiabeticos" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Antidiabéticos" android:textColor="@color/gris_oscuro" android:buttonTint="@color/verde_primario"/>
+                        <CheckBox android:id="@+id/cbCardiovasculares" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Cardiovasculares" android:textColor="@color/gris_oscuro" android:buttonTint="@color/verde_primario"/>
+                        <CheckBox android:id="@+id/cbRespiratorios" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Respiratorios" android:textColor="@color/gris_oscuro" android:buttonTint="@color/verde_primario"/>
+                        <CheckBox android:id="@+id/cbSuplementos" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Suplementos y Vitaminas" android:textColor="@color/gris_oscuro" android:buttonTint="@color/verde_primario"/>
+                        <CheckBox android:id="@+id/cbDermatologicos" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Dermatológicos" android:textColor="@color/gris_oscuro" android:buttonTint="@color/verde_primario"/>
+                        <CheckBox android:id="@+id/cbNeurologicos" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Neurológicos" android:textColor="@color/gris_oscuro" android:buttonTint="@color/verde_primario"/>
+
                     </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -206,7 +165,7 @@
                 android:textColor="@color/blanco"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                android:layout_marginBottom="12dp"/>
+                android:layout_marginBottom="12dp" />
 
             <Button
                 android:id="@+id/btnEliminar"
@@ -216,7 +175,7 @@
                 android:backgroundTint="@color/color_error"
                 android:textColor="@color/blanco"
                 android:textSize="16sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <ProgressBar
                 android:id="@+id/progressBar"
@@ -224,7 +183,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:visibility="gone"
-                android:layout_marginTop="16dp"/>
+                android:layout_marginTop="16dp" />
 
         </LinearLayout>
     </ScrollView>

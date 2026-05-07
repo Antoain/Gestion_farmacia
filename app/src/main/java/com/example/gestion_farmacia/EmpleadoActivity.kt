@@ -10,7 +10,7 @@ import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
 
-class MainActivity : AppCompatActivity() {
+class EmpleadoActivity : AppCompatActivity() {
 
     private lateinit var auth: FirebaseAuth
     private lateinit var navController: NavController
@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_empleado)
 
         auth    = FirebaseAuth.getInstance()
         session = SessionManager(this)
@@ -34,9 +34,9 @@ class MainActivity : AppCompatActivity() {
 
         val bottomNav = findViewById<BottomNavigationView>(R.id.bottom_nav)
 
-        // Limpiar el menú que viene del XML y cargar el de admin
+        // Limpiar primero para evitar duplicados
         bottomNav.menu.clear()
-        bottomNav.inflateMenu(R.menu.bottom_nav_menu_admin)
+        bottomNav.inflateMenu(R.menu.bottom_nav_menu_empleado)
         bottomNav.setupWithNavController(navController)
 
         bottomNav.setOnItemSelectedListener { item ->

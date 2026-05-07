@@ -3,32 +3,38 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/verde_suave">
+    android:background="@color/verde_pastel">
 
+    <!-- Header idéntico al de Medicamentos -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/verde_oscuro"
-        android:padding="20dp"
+        android:background="@color/verde_secundario"
+        android:orientation="horizontal"
         android:gravity="center_vertical"
-        android:orientation="horizontal">
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="40dp"
+        android:paddingBottom="16dp">
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Proveedores"
+            android:text="🏭 Proveedores"
             android:textColor="@color/blanco"
             android:textSize="20sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/btnAgregarProveedor"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:text="+ Agregar"
-            android:backgroundTint="@color/blanco"
-            android:textColor="@color/verde_oscuro"/>
+            android:textSize="13sp"
+            android:backgroundTint="@color/verde_oscuro"
+            android:textColor="@color/blanco" />
+
     </LinearLayout>
 
     <ProgressBar
@@ -36,13 +42,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:visibility="gone"/>
+        android:visibility="gone" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerProveedores"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="16dp"
-        android:clipToPadding="false"/>
+        android:padding="8dp"
+        android:clipToPadding="false" />
 
 </LinearLayout>

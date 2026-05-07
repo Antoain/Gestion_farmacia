@@ -14,6 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Gestion_farmacia">
 
+        <!-- Launcher: siempre inicia en Login -->
         <activity android:name=".LoginActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,12 +22,19 @@
             </intent-filter>
         </activity>
 
+        <!-- Actividad principal del ADMINISTRADOR -->
+        <activity android:name=".MainActivity"      android:exported="false"/>
 
-        <activity android:name=".MainActivity" android:exported="false"/>
-        <activity android:name=".AgregarMedicamentoActivity" android:exported="false"/>
-        <activity android:name=".DetalleMedicamentoActivity" android:exported="false"/>
-        <activity android:name=".AgregarProveedorActivity" android:exported="false"/>
-        <activity android:name=".DetalleProveedorActivity" android:exported="false"/>
+        <!-- Actividad principal del EMPLEADO -->
+        <activity android:name=".EmpleadoActivity"  android:exported="false"/>
+
+        <!-- Medicamentos -->
+        <activity android:name=".AgregarMedicamentoActivity"  android:exported="false"/>
+        <activity android:name=".DetalleMedicamentoActivity"  android:exported="false"/>
+
+        <!-- Proveedores -->
+        <activity android:name=".AgregarProveedorActivity"    android:exported="false"/>
+        <activity android:name=".DetalleProveedorActivity"    android:exported="false"/>
 
     </application>
 
